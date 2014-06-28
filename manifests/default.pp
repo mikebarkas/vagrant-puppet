@@ -1,15 +1,8 @@
-#node 'dev.local' {
+Exec { path => [ "/bin/", "/sbin/", "/usr/bin/", "/usr/sbin" ] }
 
-#  exec { 'apt-update':
-#    command => '/usr/bin/apt-get update'
-#  }
-
-#}
-
-package { 'zip' :
-  ensure => installed,
-}
-
-package { 'git' :
-  ensure => installed,
-}
+#
+# Include Modules.
+#
+include system-update
+include utilities
+include apache
