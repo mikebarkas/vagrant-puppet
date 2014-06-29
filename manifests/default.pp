@@ -7,3 +7,4 @@ include system_update
 include utilities
 include apache
 include php
+include mysql

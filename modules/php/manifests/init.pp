@@ -1,13 +1,14 @@
 class php {
 
+  # PHP packages
   package { 'php5' :
     ensure => present,
     require => Class['system_update'],
   }
 
   package { 'libapache2-mod-php5' :
-  ensure => present,
-  require => Class['system_update'],
+    ensure => present,
+    require => Class['system_update'],
   }
 
   package { 'php5-gd' :
@@ -24,4 +25,7 @@ class php {
     ensure => present,
     require => Class['system_update'],
   }
+
+  # PHP config
+  
 }
