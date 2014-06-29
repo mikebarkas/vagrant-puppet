@@ -2,7 +2,7 @@ class apache {
   
   package { 'apache2' :
     ensure => present,
-    require => Class['system-update'],
+    require => Class['system_update'],
   }
 
   service { 'apache2' :
