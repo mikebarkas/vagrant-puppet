@@ -11,38 +11,37 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #
   config.vm.box = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
-
   config.vm.hostname = "dev.local"
 
   #
-  # Port mapping
+  # Port mapping.
   #
   config.vm.network "forwarded_port", guest: 80, host: 8080
 
   #
-  # Private network
+  # Private network.
   #
   config.vm.network "private_network", ip: "10.10.0.200"
 
   #
-  # Public network
+  # Public network.
   #
   # config.vm.network "public_network", ip: "192.168.1.220"
 
   #
-  # Sync folder
+  # Sync folder.
   #
   # config.vm.synced_folder "../data", "/vagrant_data"
 
   # 
-  # VM config
+  # VM config.
   #
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
 
   #
-  # Provision with Puppet
+  # Provision with Puppet.
   #
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "manifests"
