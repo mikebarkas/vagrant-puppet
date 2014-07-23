@@ -22,12 +22,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #
   # Private network
   #
-  config.vm.network "private_network", ip: "192.168.10.40"
+  config.vm.network "private_network", ip: "10.10.0.200"
 
   #
   # Public network
   #
-  # config.vm.network "public_network"
+  # config.vm.network "public_network", ip: "192.168.1.220"
 
   #
   # Sync folder
@@ -38,7 +38,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # VM config
   #
   config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "2048"]
+    vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
 
   #

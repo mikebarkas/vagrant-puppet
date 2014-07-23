@@ -8,4 +8,4 @@ include utilities
 include apache
 include php
 include mysql
-#include composer
+include composer
