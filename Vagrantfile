@@ -21,12 +21,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #
   # Private network.
   #
-  config.vm.network "private_network", ip: "10.10.0.200"
+  config.vm.network "private_network", ip: "10.10.0.10"
 
   #
   # Public network.
   #
-  # config.vm.network "public_network", ip: "192.168.1.220"
+  # config.vm.network "public_network", ip: "192.168.1.10"
 
   #
   # Sync folder.
