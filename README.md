@@ -1,8 +1,18 @@
-vagrant-puppet
-==============
+Vagrant Puppet Virtual Machine
+----
 
-Vagrant and Puppet config for VM
+Virtual machine built with Vagrant and provisioned with Puppet.
 
 Creates an Ubuntu LAMP server.
 
-Under development.
+----
+
+Puppet Modules
+
+* Ubuntu Precise64
+* Apache2
+* MySQL
+* PHP5
+* Composer
+* Git
+* Zip
